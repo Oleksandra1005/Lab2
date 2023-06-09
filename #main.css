@@ -1,0 +1,44 @@
+/* Стилі для бейджу */
+.badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #8a2be2;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 0 10px 0 10px;
+  }
+  
+  /* Стилі для анімації бейджу */
+  .badge:hover {
+    transform: translateY(-10px);
+    background-color: #0000ff;
+  }
+  
+  .badge:hover::after {
+    content: " - Пакляченко Олександра";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #0000ff;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  /* Стилі для друку бейджу */
+  @media print {
+    .badge {
+      background-color: #fff;
+      color: #8a2be2;
+    }
+    
+    .badge::after {
+      content: " - Пакляченко Олександра";
+      background-color: transparent;
+      color: #8a2be2;
+    }
+  }
+  
